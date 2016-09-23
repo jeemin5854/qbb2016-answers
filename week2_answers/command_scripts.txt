@@ -1,0 +1,53 @@
+1.
+time velveth Assem 31 -shortPaired -fastq -separate reads_low_1.fastq reads_low_2.fastq
+real	0m0.137s
+user	0m0.064s
+sys	0m0.058s
+
+time velvetg Assem >velvetg
+real	0m0.051s
+user	0m0.036s
+sys	0m0.007s 
+
+time spades.py -1 reads_low_1.fastq -2 reads_low_2.fastq -o spadesoutput1
+real	0m5.181s
+user	0m4.900s
+sys	0m0.950s
+
+
+N50= length of your contig that covers 50% of assemblies of contigs
+
+lastz --chain reference.fasta[unmask] contigs.fa --rdotplot=spadesdotplot
+
+2.
+time velveth high_Assem 31 -shortPaired -fastq -separate reads_1.fastq reads_2.fastq
+real	0m11.725s
+user	0m10.564s
+sys	0m0.593s
+
+time velvetg high_Assem/ >high_velvetg
+real	0m20.622s
+user	0m20.134s
+sys	0m0.324s
+
+time spades.py -1 reads_1.fastq -2 reads_2.fastq -o high_spadesoutput
+real	3m0.125s
+user	8m33.320s
+sys	0m22.486s
+
+
+
+R studio Commands
+lowvelvet=read.table("/Users/cmdb/qbb2016-answers/week2-answers/low_Assem/velvet_low_dotplot", header=T)
+plot.default(lowvelvet)
+
+lowspade =read.table("/Users/cmdb/qbb2016-answers/week2-answers/low_spadesoutput1/Rspadesdotplot", header =T)
+plot.default(lowspade)
+
+
+highvelvet=read.table("/Users/cmdb/qbb2016-answers/week2-answers/high_Assem/RhighAssemdotplot", header=T)
+plot.default(highvelvet)
+
+highspade=read.table("/Users/cmdb/qbb2016-answers/week2-answers/high_spadesout/RhighSpadesdotplot", header=T)
+plot.default(highspade)
+
