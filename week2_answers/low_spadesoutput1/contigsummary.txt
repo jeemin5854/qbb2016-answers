@@ -1,0 +1,5 @@
+min is 207.0
+max is 1737.0
+Average is 389.203125
+N50 is e
+374.0
