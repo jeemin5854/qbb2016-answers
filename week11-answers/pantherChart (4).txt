@@ -1,0 +1,9 @@
+1	binding (GO:0005488)	14	25.9%	35.9%
+2	receptor activity (GO:0004872)	1	1.9%	2.6%
+3	structural molecule activity (GO:0005198)	2	3.7%	5.1%
+4	channel regulator activity (GO:0016247)	1	1.9%	2.6%
+5	catalytic activity (GO:0003824)	16	29.6%	41.0%
+6	transporter activity (GO:0005215)	5	9.3%	12.8%
+
+
+The most unregulated gene, 2310046K01Rik, is a transmembrane protein likely to be acting as  a riboflavin transporter. The cluster of related genes are likely to be involved in a signaling pathway involved in receptor and catalytic activities during the differentiation.
