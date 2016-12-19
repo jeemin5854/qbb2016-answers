@@ -11,7 +11,8 @@ for i in range (1, len(string_list)):
     sequences = string_list[i].split("Query")
     for j in range (1, len(sequences)):
         result += sequences[j].split("\n")[2].split()[-2] + '\n'
-    f.write(result)
+    f.write(result)\
+    
     result = ""
 
 f.close()
